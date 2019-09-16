@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:10-alpine
 
 ENV NODE_ENV production
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
@@ -10,3 +10,4 @@ RUN npm install -g sonos2mqtt
 USER node
 
 ENTRYPOINT [ "sonos2mqtt" ]
+
